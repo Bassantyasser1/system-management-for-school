@@ -1,3 +1,0 @@
-1~Breakfast
-2~launch
-3~dinner
