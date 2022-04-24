@@ -12,13 +12,27 @@
 <body>
     <h1>list all activities</h1>
     <?php
-        $myfile = fopen("activities.txt", "r+") or die("Unable to open file!");
-        while (!feof($myfile)) {
-            $line = fgets($myfile);
-            $Arrayline=explode("~",$line)
-            echo $Arrayline[1]."<br>";
-        }
-        fclose($myfile); 
+         
+         include_once("FileManger.php");
+         echo "<h2> this is code from php</h2>";
+        $File = new FileManger("user");
+       $List = $File->ListAll();
     ?>
+    <table border=1>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Password</th>
+        </tr>
+       <?php 
+        for ($i=0; $i < count($List); $i++) { 
+            $Array = explode("~",$List[$i]);
+            $Id = $Array[0];
+            $Name = $Array[1];
+            $Password = $Array[2];
+            echo "<tr><td>$Id</td><td>$Name</td><td>$Password</td></tr>";
+        }
+       ?>
+    </table>
 </body>
 </html>
