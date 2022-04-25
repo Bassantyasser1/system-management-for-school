@@ -14,13 +14,13 @@
     {
           if($id!=null) $this->setId($id);
           else $this->id=0;
-          if($name!=null) $this->getName($name);
+          if($name!=null) $this->setName($name);
           else $this->name="";
-          if($birthdate!=null) $this->getbirthdate($birthdate);
+          if($birthdate!=null) $this->setbirthdate($birthdate);
           else $this->birthdate="";
-          if($age!=null) $this->getage($age);
+          if($age!=null) $this->setage($age);
           else $this->age=0;
-          if($gender!=null) $this->getgender($gender);
+          if($gender!=null) $this->setgender($gender);
           else $this->gender="";
           $this->file = new FileManger("usertype"); 
     }
@@ -32,7 +32,7 @@
 
     function setId(int $id):self
     {
-        $this->$id=$id;
+        $this->id=$id;
         return $this;
     }
 
@@ -43,7 +43,7 @@
 
     function setName(string $name):self
     {
-        $this->$name=$name;
+        $this->name=$name;
         return $this;
     }
 
@@ -54,7 +54,7 @@
 
     function setbirthdate(string $birthdate): self
     {
-        $this->$birthdate=$birthdate;
+        $this->birthdate=$birthdate;
         return $this;
     }
 
@@ -65,7 +65,7 @@
 
     function setage(int $age): self
     {
-        $this->$age=$age;
+        $this->age=$age;
         return $this;
     }
 
@@ -76,7 +76,7 @@
 
     function setgender(string $gender):self
     {
-        $this->$gender=$gender;
+        $this->gender=$gender;
         return $this;
     }
 
@@ -140,7 +140,7 @@
     public function Search()
     {
         $list = $this->file->ListAll();
-        for($i=0;$i<count($list);$i++)
+        for($i=0;$i<count($list)-1;$i++)
         {
             $usertype = new usertype();
             $usertype->FromStringToObject($list[$i]);
