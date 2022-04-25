@@ -82,7 +82,7 @@
 
     public function ToString()
     {
-        $string=$this->id. "~".$this->name."~".$this->birthdate."~".$this->age."~".$this->gender."\r\n";
+        $string=$this->id."~".$this->name."~".$this->birthdate."~".$this->age."~".$this->gender."\r\n";
         return $string;
     }
 

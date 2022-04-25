@@ -123,19 +123,16 @@ class Product
         }
         return $DisplayedList;
     }
-<<<<<<< Updated upstream
-	
-=======
 	 
->>>>>>> Stashed changes
+
 	function getId(): int {
 		return $this->Id;
 	}
 	
-<<<<<<< Updated upstream
+
 	
-=======
->>>>>>> Stashed changes
+
+
 	function setId(int $Id): self {
 		$this->Id = $Id;
 		return $this;
@@ -145,10 +142,8 @@ class Product
 		return $this->Name;
 	}
 	
-<<<<<<< Updated upstream
-	
-=======
->>>>>>> Stashed changes
+
+
 	function setName(string $Name): self {
 		$this->Name = $Name;
 		return $this;
@@ -158,28 +153,20 @@ class Product
 		return $this->Price;
 	}
 	
-<<<<<<< Updated upstream
-	
-=======
->>>>>>> Stashed changes
+
+
 	function setPrice(float $Price): self {
 		$this->Price = $Price;
 		return $this;
 	}
-<<<<<<< Updated upstream
+   
 	
 	function getType(): string {
 		return $this->Type;
 	}
 	
 	
-=======
 
-	function getType(): string {
-		return $this->Type;
-	}
-
->>>>>>> Stashed changes
 	function setType(string $Type): self {
 		$this->Type = $Type;
 		return $this;
