@@ -124,71 +124,42 @@ class Product
         }
         return $DisplayedList;
     }
-	/**
-	 * 
-	 * @return int
-	 */
+	
 	function getId(): int {
 		return $this->Id;
 	}
 	
-	/**
-	 * 
-	 * @param int $Id 
-	 * @return Product
-	 */
+	
 	function setId(int $Id): self {
 		$this->Id = $Id;
 		return $this;
 	}
-	/**
-	 * 
-	 * @return string
-	 */
+	
 	function getName(): string {
 		return $this->Name;
 	}
 	
-	/**
-	 * 
-	 * @param string $Name 
-	 * @return Product
-	 */
+	
 	function setName(string $Name): self {
 		$this->Name = $Name;
 		return $this;
 	}
-	/**
-	 * 
-	 * @return float
-	 */
+	
 	function getPrice(): float {
 		return $this->Price;
 	}
 	
-	/**
-	 * 
-	 * @param float $Price 
-	 * @return Product
-	 */
+	
 	function setPrice(float $Price): self {
 		$this->Price = $Price;
 		return $this;
 	}
 	
-	/**
-	 * 
-	 * @return string
-	 */
 	function getType(): string {
 		return $this->Type;
 	}
 	
-	/**
-	 * 
-	 * @param string $Type 
-	 * @return Product
-	 */
+	
 	function setType(string $Type): self {
 		$this->Type = $Type;
 		return $this;
