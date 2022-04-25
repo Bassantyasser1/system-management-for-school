@@ -32,8 +32,7 @@ class Product
         $Array = explode("~",$Line);
         $this->setId(intval($Array[0]));
         $this->setName($Array[1]);
-        $this->setPrice(floatval($Array[2]));
-        
+        $this->setPrice(floatval($Array[2])); 
         $this->setType(str_replace("\r\n","",$Array[3]));
     }
 
