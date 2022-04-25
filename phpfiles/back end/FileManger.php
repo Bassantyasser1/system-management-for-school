@@ -1,5 +1,5 @@
 <?php
-// do all file manipulations
+
 class FileManger
 {
     private $fileName;
@@ -7,7 +7,7 @@ class FileManger
     public function __construct($filename) {
         $this->fileName ="../files/". $filename.".txt";
     }
-// Mapping NFR to code : Encryption
+
     function Encrypt()
     {
         $Word = file_get_contents($this->fileName);
@@ -31,9 +31,7 @@ class FileManger
         file_put_contents($this->fileName, $Result);
     }
 
-    //CRUD
-
-    //Create
+    
 
     function StoreRecord($record)
     {
@@ -44,7 +42,7 @@ class FileManger
         $this->Encrypt();
     }
 
-    //Read
+    
     function getRowById($id)
     {
         $this->Decrypt();
@@ -133,22 +131,19 @@ class FileManger
 
     }
 
-    //update
     function UpdateRecord( $Newrecord, $OldRecord)
     {
         $this->Decrypt();
         $contents = file_get_contents($this->fileName);
-        //replace recrd with null in content
         $contents = str_replace($OldRecord, $Newrecord, $contents);
         file_put_contents($this->fileName, $contents);
         $this->Encrypt();
     }
-    //Delete
+
     function DeleteRecord ($record)
     {
         $this->Decrypt();
         $contents = file_get_contents($this->fileName);
-        //replace recrd with null in content
         $contents = str_replace($record, '', $contents);
         file_put_contents($this->fileName, $contents);
         $this->Encrypt();
