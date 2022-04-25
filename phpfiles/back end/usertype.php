@@ -2,6 +2,9 @@
 include_once "usertypeclass.php";
 include_once "FileManger.php";
 include_once "Functions.php";
+echo "heleo";
+exit();
+
 if(isset($_POST["Create"]))
 {
     $usertype = new usertype();
