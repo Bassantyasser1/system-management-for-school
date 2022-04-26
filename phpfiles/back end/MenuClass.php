@@ -5,10 +5,10 @@ class menu
 {
     private int $Id;
     private string $Name;
-    private float Price;
-    private string Type;
+    private float $Price;
+    private string $Type;
     private FileManger $File;
-    public function__construct(int $Id = null,string $Name =null,float $Price = null,string $Type = null)
+    public function __construct(int $Id = null,string $Name =null,float $Price = null,string $Type = null)
     {
         if($Id!=null)$this->setId($Id);
         else $this->Id=0;
@@ -23,7 +23,7 @@ class menu
     }
     public function Tostring()
     {
-        $String =this->Id."~".$this->Name."~".$this->Price."~".$this->Type."\r\n";
+        $String =$this->Id."~".$this->Name."~".$this->Price."~".$this->Type."\r\n";
         return $String;
     }
     public function FromStringToObject($Line)
@@ -33,9 +33,9 @@ class menu
         $this->setName($Array[1]);
         $this->setPrice(floatval($Array[2]));
 
-        $this->setType(str_replace("\r\n","",Array[3]));
+        $this->setType(str_replace("\r\n","",$Array[3]));
     }
-    public function AllsSet()
+    public function AllIsSet()
     {
         if($this->Id==0)return 0;
         if($this->Name=="")return 0;
@@ -98,7 +98,7 @@ class menu
                 if($this->Price!=$menu->getPrice())
                 {
                     array_splice($List,$i,1);
-                    i--;
+                    $i--;
                 }
             }
         }
@@ -114,7 +114,7 @@ class menu
     }
     function getId(): int
     {
-        return this->Id;
+        return $this->Id;
     }
     function setId(int $Id):self{
         $this->Id=$Id;

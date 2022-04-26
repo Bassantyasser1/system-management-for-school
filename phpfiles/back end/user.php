@@ -5,39 +5,39 @@ include_once "Functions.php";
 if(isset($_POST["Create"]))
 {
     $user = new user();
-    $user->setname($_POST["name"]);
-    $user->setage(intval($_POST["age"]));
-    $user->setaddress($_POST["address"]);
+    $user->setname($_POST["Name"]);
+    $user->setage(intval($_POST["Age"]));
+    $user->setaddress($_POST["Address"]);
     $user->Create();
     header("Location:user.html");
 }
 if(isset($_POST["Update"]))
 {
-    $User = new User();
-    $user->setid(intval($_POST["id"]));
-    $user->setname($_POST["name"]);
-    $user->setage(intval($_POST["age"]));
-    $user->setaddress($_POST["address"]);
-    $user->Update();
+    $User = new user();
+    $User->setid(intval($_POST["Id"]));
+    $User->setname($_POST["Name"]);
+    $User->setage(intval($_POST["Age"]));
+    $User->setaddress($_POST["Address"]);
+    $User->Update();
     header("Location:user.html");
 }
 if(isset($_POST["Delete"]))
 {
     $user = new user();
-    $user->setid(intval($_POST["id"]));
-    $user->setname($_POST["name"]);
-    $user->setage(intval($_POST["age"]));
-    $user->setaddress($_POST["address"]);
+    $user->setid(intval($_POST["Id"]));
+    $user->setname($_POST["Name"]);
+    $user->setage(intval($_POST["Age"]));
+    $user->setaddress($_POST["Address"]);
     $user->Delete();
     header("Location:user.html");
 }
 if(isset($_POST["Search"]))
 {
-    $user = new Product();
-    $user->setid(intval($_POST["id"]));
-    $user->setname($_POST["name"]);
-    $user->setage(intval($_POST["age"]));
-    $user->setaddress($_POST["address"]);
+    $user = new user();
+    $user->setid(intval($_POST["Id"]));
+    $user->setname($_POST["Name"]);
+    $user->setage(intval($_POST["Age"]));
+    $user->setaddress($_POST["Address"]);
     $List = $user->Search();
 
     DisplayList($List);
