@@ -1,7 +1,7 @@
 <?php
 
 include_once "FileManger.php";
-class Product
+class Product 
 {
     private int $Id;
     private string $Name;
