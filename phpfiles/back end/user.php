@@ -1,16 +1,17 @@
 <?php
-include_once "UserClass.php";
+include_once "OrderClass.php";
 include_once "FileManger.php";
 include_once "Functions.php";
 if(isset($_POST["Create"]))
 {
     $user = new user();
     $user->setname($_POST["Name"]);
-    $user->setage(intval($_POST["Age"]));
-    $user->setaddress($_POST["Address"]);
-    $user->Create();
+    $user->setDateOfBirth(intval($_POST["Age"]));
+    $user->settype($_POST["Address"]);
+    $user->Add();
     header("Location:user.html");
 }
+
 if(isset($_POST["Update"]))
 {
     $User = new user();
