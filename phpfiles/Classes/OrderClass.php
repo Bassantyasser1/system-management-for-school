@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 include_once "FileMangerClass.php";
+=======
+include_once "FileManger.php";
+>>>>>>> 3a8fe3807b492fd49a4a1f88aa9ac453b2c33577
 include_once "PersonClass.php";
 include_once "OrderDetailsClass.php";
 class order extends Person implements File {
@@ -7,9 +11,15 @@ class order extends Person implements File {
 	private ?int $ClientId = 0;
 	private ?string $date = "";
 	private Data $File;
+<<<<<<< HEAD
 	//private IPay $PayObj;
 	public function __construct() {
 		$this->File = new FileManger("Order");
+=======
+	private IPay $PayObj;
+	public function __construct() {
+		$this->File = new FileManger("Order.txt");
+>>>>>>> 3a8fe3807b492fd49a4a1f88aa9ac453b2c33577
 	}
 	public function AllIsSet() {
 		if($this->Id==null) return 0;
@@ -165,8 +175,15 @@ class order extends Person implements File {
 		$this->total = $total;
 		return $this;
 	}
+<<<<<<< HEAD
 //	function setPayObj(IPay $PayObj): self {
 //		$this->PayObj = $PayObj;
 //		return $this;
 //	}
+=======
+	function setPayObj(IPay $PayObj): self {
+		$this->PayObj = $PayObj;
+		return $this;
+	}
+>>>>>>> 3a8fe3807b492fd49a4a1f88aa9ac453b2c33577
 }

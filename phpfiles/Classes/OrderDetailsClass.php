@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 include_once "FileMangerClass.php";
+=======
+include_once "FileManger.php";
+>>>>>>> 3a8fe3807b492fd49a4a1f88aa9ac453b2c33577
 include_once "PersonClass.php";
 include_once "ProductClass.php";
 include_once "OrderClass.php";

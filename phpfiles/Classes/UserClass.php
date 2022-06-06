@@ -18,7 +18,11 @@ class User extends Person implements File {
 			$this->setType($TypeId);
 			$this->setDateOfBirth($DateOfBirth);
 		}
+<<<<<<< HEAD
 		$this->FileManger = new FileManger("user");
+=======
+		$this->FileManger = new FileManger("User.txt");
+>>>>>>> 3a8fe3807b492fd49a4a1f88aa9ac453b2c33577
 	}
 	public function AllIsSet(): int
 	{
