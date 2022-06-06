@@ -78,7 +78,7 @@ class user
     public function Search()
     {
         $List = $this->File->ListAll();
-        for ($i=0; $i < count($List)-1; $i++) { 
+        for ($i=0; $i < count($List) - 1; $i++) { 
             $user = new user();
             $user->FromStringToObject($List[$i]);
             if($this->id!=0)
@@ -123,34 +123,47 @@ class user
         }
         return $DisplayedList;
     }
+
     function getid(): int {
 		return $this->id;
 	}
+	
+	
 	function setid(int $id): self {
 		$this->id = $id;
 		return $this;
 	}
+	
 	function getname(): string {
 		return $this->name;
 	}
+	
+	
 	function setname(string $name): self {
 		$this->name = $name;
 		return $this;
 	}
+	
 	function getage(): int {
 		return $this->age;
 	}
+	
+	
 	function setage(int $age): self {
 		$this->age = $age;
 		return $this;
 	}
-
+	
 	function getaddress(): string {
 		return $this->address;
 	}
-
+	
+	
 	function setaddress(string $address): self {
 		$this->address = $address;
 		return $this;
-    }
+	}
+
+
+
 }

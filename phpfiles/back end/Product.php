@@ -1,16 +1,15 @@
 <?php 
 include_once "ProductClass.php";
-//include_once "FileManger.php";
+include_once "FileManger.php";
 include_once "Functions.php";
 if(isset($_POST["Create"]))
 {
-   
     $Product = new Product();
 
     $Product->setName($_POST["Name"]);
-    $Product->setCost(floatval($_POST["Price"]));
-    $Product->settype($_POST("Type"));
-    $Product->Add();
+    $Product->setPrice(floatval($_POST["Price"]));
+    $Product->setType($_POST["Type"]);
+    $Product->Create();
     header("Location:Product.html");
 }
 if(isset($_POST["Update"]))
