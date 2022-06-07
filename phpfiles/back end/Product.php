@@ -5,7 +5,6 @@ include_once "Functions.php";
 if(isset($_POST["Create"]))
 {
     $Product = new Product();
-
     $Product->setName($_POST["Name"]);
     $Product->setPrice(floatval($_POST["Price"]));
     $Product->setType($_POST["Type"]);

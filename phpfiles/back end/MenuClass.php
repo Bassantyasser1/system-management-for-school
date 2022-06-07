@@ -3,9 +3,9 @@
 include_once "filemanger.php";
 class menu
 {
-    private int $Id;
-    private string $Name;
-    private float $Price;
+    private int $Id=0;
+    private string $Name="";
+    private float $Price=0;
     private string $Type;
     private FileManger $File;
     public function __construct(int $Id = null,string $Name =null,float $Price = null,string $Type = null)

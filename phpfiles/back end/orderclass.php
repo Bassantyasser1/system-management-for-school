@@ -1,7 +1,6 @@
 <?php
 
 include_once "FileManger.php";
-
 class order 
 {
     private int $id;
